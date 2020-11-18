@@ -1,0 +1,1553 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  padding: 1.5em 2em;
+position: relative;
+z-index: 1;
+
+}
+
+
+
+
+
+.logo{
+  height: 6em;
+
+}
+
+ul{
+  margin: auto 0;
+
+  list-style: none;
+}
+
+nav ul{
+
+  display: flex;
+}
+
+li{
+  margin-left: 2em;
+cursor: pointer;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+
+}
+
+.intro{
+  height:100vh;
+  width:100vw;
+background: black;
+  margin-top: -8em;
+  position: relative;
+  z-index: -1;
+}
+
+
+
+
+.canvas{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+
+}
+
+.intro h1{
+  position: absolute;
+  top:50%;
+  left:50%;
+  color:white;
+  transform: translate(-50%, -50%);
+  font-size: 4em;
+  text-align: center;
+font-family: 'Montserrat', sans-serif;
+}
+
+/* Навигационная иконка */
+
+
+.menu{
+  width: 40px;
+  height:40px;
+  display:block;
+  position: fixed;
+  z-index: 3
+}
+
+.list{
+  height:100%;
+  	top:0;
+  	display:flex;
+  	position:fixed;
+  	align-items:center;
+  	flex-flow:column wrap;
+  	justify-content:center;
+  	z-index:-1;
+  	transition:all .75s ease;
+    background: #233FD9;
+    width:120px;
+    right:-120px;
+    opacity:0;
+}
+
+.list a{
+  margin:1em 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+
+}
+
+.btn-nav{
+  background: #233FD9;
+  width:60px;
+  height:60px;
+  bottom:20px;
+  right:20px;
+  position: fixed;
+  border-radius: 50%;
+  z-index:1000;
+  cursor: pointer;
+}
+
+.btn-nav .before,
+.btn-nav .after{
+	background:white;
+	width:40px;
+	height:3px;
+	right:10px;
+  bottom: 22px;
+	display:block;
+	position:absolute;
+  z-index: 5;
+	content:"";
+	transition:all .75s ease;
+  transform: rotate(0);
+	}
+
+  .btn-nav .after{
+bottom:32px;
+  }
+
+
+
+
+
+
+
+
+
+#second-page{
+  text-align: center;
+  min-height:100vh;
+  width:100vw;
+  position: relative;
+
+
+}
+
+#second-page h1{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 4.5em;
+  padding: 3em 3.5em 0em 3.5em;
+font-family: 'Montserrat', sans-serif;
+margin-bottom: 1em;
+
+
+
+}
+
+.second-h1{
+  opacity: 0;
+  margin: 0;
+}
+
+/* Icon */
+/* // Example 1 */
+@keyframes scroll_1 {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-0.6em); }
+  50%  { transform: translateY(0); }
+  75%  { transform: translateY(0.6em); }
+  100% { transform: translateY(0); }
+}
+/* // General icon style */
+.scroll-icon {
+  display: block;
+  position: relative;
+  height: 3em;
+  width: 1.5em;
+  border: .25em solid black;
+  border-radius: 1em;
+}
+
+.scroll-icon__wheel-outer {
+  display: block;
+  position: absolute;
+
+  left: 50%;
+  top: .6em;
+  height: 1em;
+  width: .4em;
+  margin-left: -.2em;
+  border-radius: .4em;
+  overflow: hidden;
+}
+
+.scroll-icon__wheel-inner {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: black;
+  animation: scroll_1 2.75s ease-in-out infinite;
+}
+
+.example {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding:0;
+
+
+}
+
+h2{
+  font-family: sans-serif;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-aspect-ratio 16/9){
+  .intro video{
+    width:100%;
+    height:auto;
+  }
+}
+
+@media (max-aspect-ratio 16/9){
+  .intro video{
+    width:auto;
+    height:100%;
+  }
+}
+
+/* Third Page */
+
+#third-page{
+  min-height:100vh;
+  width:100vw;
+  position: relative;
+ overflow: hidden;
+
+}
+
+.panel{
+
+  height: 100%;
+		width: 100%;
+		position: absolute;
+
+}
+
+.sticky{
+  background: #F1F1F1;
+
+}
+
+.sticky2{
+  background: #030415;
+  color:white;
+
+}
+
+.sticky3{
+  background: white;
+}
+
+.sticky4{
+  background: black;
+}
+
+.sticky-content-holder{
+
+  position: relative;
+  padding-top: 6em;
+  padding-left: 6em;
+}
+
+.sticky-content-holder.right{
+  padding-left: 0;
+  margin-right: 6em;
+  text-align: right;
+
+}
+
+
+
+.feature-h3{
+font-family: 'Raleway', sans-serif;
+  font-weight: normal;
+
+  font-size: 3.5em;
+
+  margin: 0;
+  margin-bottom: .2em;
+  text-align: left;
+}
+
+.feature-p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+
+  font-size: 1.3em;
+    width: 30%;
+    position: absolute;
+    line-height: 1.3;
+
+}
+
+.feature-h3.dark{
+    color:#01012F;
+}
+
+.feature-p.dark{
+  color:#040210;
+}
+
+.light{
+  color:white;
+}
+
+.feature-h3.light{
+  text-align: right;
+  width:100%;
+}
+
+.second-h3{
+  margin-top: 0em;
+}
+
+
+
+#f2-p, #f4-p{
+  right:0;
+  text-align: right;
+  /* margin-right: 8.5%;
+  margin-top: 19.1%; */
+
+  color: white;
+
+}
+
+#f4-p{
+  /* margin-top: 20%; */
+}
+
+.line{
+      width: 100%;
+      background: #d01515;
+      display: block;
+      height: 5px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+
+
+
+.f-img{
+  position: absolute;
+}
+
+#f2, #f5{
+  width: 40%;
+    right: 0;
+    top: 23%;
+}
+
+#f1, #f6{
+  width: 25%;
+    right: 38%;
+    top: 27%;
+    margin-top: 15%;
+}
+
+#f3, #f7{
+  width:40%;
+  left:0;
+  top:22%;
+
+
+}
+
+#f4, #f8{
+  width:25%;
+  left:38%;
+  top:25%;
+  margin-top: 15%;
+
+}
+
+/* Fourth Page, Fifth Page */
+#fourth-page, #fifth-page{
+  min-height:100vh;
+  width:100vw;
+
+}
+
+
+
+.back-for-four-and-five{
+  background: url("images/white-pattern.jpg");
+
+  background-repeat: repeat;
+  background-size: cover;
+
+}
+
+.team-h3{
+  font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    font-size: 3.5em;
+    color:#11083C;
+    text-align: center;
+    padding-top:0.7em;
+    margin-bottom: 0.1em;
+  margin-top: 0;
+}
+
+.team-holder{
+  display:grid;
+  padding: 2em 6em;
+}
+
+.team-member{
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 1em;
+  background: white;
+  padding: 1em;
+  border-radius: 25px;
+  -webkit-box-shadow: 4px 4px 15px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 4px 15px -10px rgba(0,0,0,0.75);
+  box-shadow: 4px 4px 15px -10px rgba(0,0,0,0.75);
+}
+
+.last-member{
+  margin-bottom: 0em;
+}
+
+
+
+.team-content-holder{
+  padding: 0em 2.5em;
+  padding-top: 1.5em;
+}
+
+.team-img{
+  height:13em;
+}
+
+.right-line{
+  text-align: right;
+}
+
+p.right-line{
+  width:100%;
+}
+
+h6{
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.3em;
+  color:#11083C;
+}
+
+.team-position{
+  font-weight: 500;
+  font-size: 1em;
+  margin-top: .1em;
+}
+
+.team-p{
+
+  font-family: 'Montserrat', sans-serif;
+  color:#11083C;
+  font-size: 1.1em;
+  margin-top: .7em;
+  line-height: 1.5em;
+}
+
+
+
+#tm6{
+  margin-bottom: 4em;
+}
+
+/* Sixth Page */
+
+#sixth-page{
+  min-height:100vh;
+  width:100vw;
+  background: #030415;
+
+}
+
+.athlete-h3{
+  margin: 0;
+  padding-top: 1em;
+  margin-bottom: .5em;
+  font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    font-size: 3.5em;
+    color:white;
+    text-align: center;
+}
+
+.cards-grid{
+  display:grid;
+  grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  padding: 2em 6em;
+  /* padding-left: 8em; */
+  grid-row-gap: 2em;
+  padding-bottom: 8em;
+
+
+
+
+}
+
+.flip-card{
+  background: transparent;
+  width: 277px;
+  height: 375px;
+
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 0 auto;
+
+
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: white;
+  color: black;
+}
+
+
+.flip-card-back {
+  background-color: #F8F8F8;
+  color: #11083C;
+  transform: rotateY(180deg);
+}
+
+.p-holder{
+  padding-left: .8em;
+  padding-right: .8em;
+}
+
+.flip-card-back p{
+  font-family: 'Montserrat', sans-serif;
+  color:#11083C;
+  font-size: .85em;
+line-height: 1.5em;
+  margin-top: 0em;
+  margin-bottom: .7em;
+}
+
+.flip-card-back h4{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 1.4em;
+  margin-bottom: .7em;
+}
+
+/* Seventh Page */
+
+#seventh-page{
+  height:86vh;
+  width:100vw;
+  position: relative;
+
+
+
+}
+
+
+
+
+.ml4 {
+  position: relative;
+  font-weight: 900;
+  font-size: 4.5em;
+  text-align: center;
+  margin-top: 2em;
+}
+.ml4 .letters {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: .7em;
+  right: 0;
+  opacity: 0;
+}
+
+.letters-3{
+  width:50%;
+}
+
+
+
+/* Соц. сети */
+
+.btns-holder{
+  position: relative;
+  top:42%;
+  left:42%;
+
+}
+
+.sign-in{
+  margin-bottom: 2em;
+}
+
+.sign-in button{
+background: white;
+  font-size: 2em;
+font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color:#233FD9;
+  border: 3px solid #3e64ff;
+  border-radius: 15px;
+  padding:  .5em .7em;
+  cursor: pointer;
+}
+
+.sign-in button:hover{
+ animation: btn_transition 1s ease-in-out;
+  background: #233FD9;
+  color:white;
+  border-radius: 75px;
+  border: 3px solid #233FD9;
+}
+
+@keyframes btn_transition {
+  from{
+    background: white;
+    color:#233FD9;
+    border-radius: 15px;
+    border: 3px solid #3e64ff;
+  }
+  to{
+    background: #233FD9;
+    color:white;
+    border-radius: 75px;
+    border: 3px solid #233FD9;
+  }
+}
+.media-icons-container{
+  display: flex;
+
+
+}
+
+.media-icon{
+  font-size: 2.3em;
+  color:#1b1c25;
+  padding: .5em;
+  cursor: pointer;
+}
+
+.media-icon:hover{
+  color:#233FD9;
+}
+
+
+.dr {
+position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width:100px;
+}
+
+footer{
+  display: block;
+  text-align: center;
+  margin-top: -3.5em;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+/* Media Queries */
+
+
+
+
+@media screen and (max-width: 600px) {
+  .athlete-h3{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .list{
+    width:110px;
+  }
+
+  .list a{
+    font-size: .8em;
+  }
+}
+
+@media screen and (max-width:361px) {
+  .nav-ul{
+    display:none;
+  }
+
+  .intro h1{
+    top:42%;
+
+    font-size: 3em;
+  }
+}
+
+@media screen and (min-width:362px) and (max-width: 500px) {
+  .nav-ul{
+    display:none;
+  }
+
+
+
+  .intro h1{
+    top:42%;
+
+    font-size: 3.2em;
+  }
+}
+@media screen and (min-width:501px) and (max-width: 700px) {
+  .nav-ul{
+    display:none;
+  }
+
+  .intro{
+    z-index: 0;
+  }
+
+  .intro h1{
+    top:43%;
+    font-size: 3.7em;
+  }
+
+
+}
+
+/* Second page */
+@media screen and (max-width:1180px) and (min-width:912px) {
+  #second-page h1{
+    padding: 2.5em 2.5em 0em 2.5em;
+  }
+}
+
+@media screen and (max-width:912px){
+  #second-page h1{
+    padding: 2.5em 2em 0em 2em;
+  }
+}
+
+@media screen and (max-width:964px) and (min-width:794px){
+  #second-page h1{
+    font-size: 4em;
+  }
+}
+
+@media screen and (max-width:793px) and (min-width:542px){
+  #second-page h1{
+    font-size: 3.5em;
+    padding-top: 3em;
+  }
+
+}
+@media screen and (max-width:541px) and (min-width:418px){
+  #second-page h1{
+    font-size: 2.7em;
+    padding-top: 3.5em;
+  }
+
+}
+
+@media screen and (max-width:417px) {
+  #second-page h1{
+    font-size: 2.8em;
+    padding: 3.7em 1.5em 0;
+  }
+
+}
+
+@media screen and (max-width:388px) {
+  #second-page h1{
+    font-size: 2.5em;
+    padding: 3.7em 1.5em 0;
+  }
+
+}
+
+@media screen and (max-width:334px) {
+  #second-page h1{
+    font-size: 2.4em;
+    padding: 3.7em 1.2em 0;
+  }
+
+}
+
+/* Features */
+@media screen and (max-width:1046px) {
+
+  .sticky-content-holder{
+    padding-left: 4.5em;
+    padding-top: 4.5em;
+  }
+  .sticky-content-holder.right{
+    margin-right: 4.5em;
+  }
+  .feature-h3{
+    font-size: 3.2em;
+  }
+  .feature-p{
+    font-size: 1.2em;
+  }
+
+  #f1,#f4,#f6,#f8{
+    width:33%;
+    top:30%;
+  }
+
+  #f2,#f3, #f5, #f7{
+    width:44%;
+    top:25%;
+  }
+}
+
+@media screen and (max-width:907px) {
+  .feature-h3{
+    font-size: 3.1em;
+  }
+  .feature-p{
+    font-size: 1em;
+  }
+  #f1,#f4,#f6,#f8{
+    width:35%;
+    top:37%;
+  }
+
+  #f2,#f3, #f5, #f7{
+    width:46%;
+    top:27%;
+  }
+}
+
+@media screen and (max-width:751px) {
+  .sticky-content-holder{
+    padding-left: 4em;
+    padding-top: 4em;
+  }
+  .sticky-content-holder.right{
+    margin-right: 4em;
+  }
+  #f1,#f4,#f6,#f8{
+    width:37%;
+    top:45%;
+  }
+
+  #f2,#f3, #f5, #f7{
+    width:48%;
+    top:35%;
+  }
+}
+
+@media screen and (max-width:613px) {
+  .sticky-content-holder{
+    padding-left: 3.5em;
+    padding-top: 3.5em;
+  }
+  .sticky-content-holder.right{
+    margin-right: 3.5em;
+  }
+  .feature-h3{
+    font-size: 2.9em;
+  }
+  .feature-p{
+    font-size: .9em;
+  }
+  #f1,#f4,#f6,#f8{
+    width:42%;
+    top:45%;
+  }
+
+  #f2,#f3, #f5, #f7{
+    width:54%;
+    top:35%;
+  }
+}
+@media screen and (max-width:513px) {
+  .sticky-content-holder{
+    padding-left: 2.5em;
+    padding-top: 2.5em;
+  }
+  .sticky-content-holder.right{
+    margin-right: 2.5em;
+  }
+
+  #f1,#f4,#f6,#f8{
+    width:52%;
+    top:49%;
+  }
+
+  #f2,#f3, #f5, #f7{
+    width:59%;
+    top:39%;
+  }
+
+  .feature-p{
+    width:65%;
+  }
+}
+
+@media screen and (max-width:444px) {
+  .sticky-content-holder{
+    padding-left: 2.2em;
+    padding-top: 5em;
+  }
+  .sticky-content-holder.right{
+    margin-right: 2.2em;
+  }
+
+  .feature-h3{
+    font-size: 2.5em;
+  }
+  .feature-p{
+    font-size: .9em;
+  }
+
+  #f1,#f4,#f6,#f8{
+    width:56%;
+    top:49%;
+  }
+
+  #f2,#f3, #f5, #f7{
+    width:63%;
+    top:39%;
+  }
+}
+
+@media screen and (max-width:392px) {
+
+
+  .sticky-content-holder{
+
+    padding-top: 2em;
+  }
+  .sticky-content-holder.right{
+
+  }
+
+  .feature-h3{
+    font-size: 2.3em;
+  }
+
+
+}
+/* Coaches */
+
+@media screen and (max-width:1310px) {
+  .team-h3{
+    font-size: 3.3em;
+  }
+
+  .team-holder{
+    padding:  1em 4em;
+
+  }
+
+  .team-content-holder{
+
+    padding-top: 1em;
+
+  }
+  h6{
+    font-size: 1.2em;
+  }
+  .team-position{
+    font-size: .9em;
+  }
+
+  .team-p{
+    font-size: 1em;
+  }
+
+  .team-img{
+    height:11em;
+  }
+
+
+}
+
+
+@media screen and (max-width:999px) {
+  .team-h3{
+    font-size: 3.25em;
+  }
+
+  .team-holder{
+    padding:  1em 4em;
+
+  }
+
+  .team-content-holder{
+    padding-top: 1em
+  }
+  h6{
+    font-size: 1.15em;
+  }
+  .team-position{
+    font-size: .85em;
+  }
+
+  .team-p{
+    font-size: .95em;
+  }
+
+  .team-img{
+    height:10em;
+  }
+
+
+}
+
+
+@media screen and (max-width:900px) {
+  .team-h3{
+    font-size: 3.1em;
+  }
+
+  .team-holder{
+    padding:  2em 3em 1em;
+
+
+  }
+
+  .team-content-holder{
+    padding-top: 1em
+  }
+  h6{
+    font-size: 1.1em;
+  }
+  .team-position{
+    font-size: .8em;
+    margin-top: .2em;
+  }
+
+  .team-p{
+    font-size: .9em;
+    margin-top: .8em;
+  }
+
+  .team-img{
+    height:9em;
+  }
+}
+
+
+@media screen and (max-width:760px) {
+  .team-h3{
+    font-size: 3.05em;
+  }
+
+  .team-holder{
+    padding:  1.5em 3em 1em;
+
+
+  }
+
+  .team-content-holder{
+      padding: 0 1.5em;
+    padding-top: 1em
+  }
+  h6{
+    font-size: 1.2em;
+    line-height: 1.3;
+  }
+  .team-position{
+    font-size: .9em;
+    margin-top: .2em;
+  }
+
+  .team-p{
+    font-size: 1.05em;
+    margin-top: .8em;
+  }
+
+  .team-img{
+    height:9.5em;
+    margin-top: 2em;
+  }
+}
+
+@media screen and (max-width:660px) {
+  .team-content-holder{
+      padding: 0 1em;
+    padding-top: 1em
+  }
+
+  .team-p{
+    font-size: 1em;
+    margin-top: .8em;
+  }
+
+  .team-img{
+    height:9.5em;
+    margin-top: 2em;
+  }
+
+  #tm4{
+    margin-top: 3em;
+  }
+}
+
+@media screen and (max-width:620px) {
+
+  .team-h3{
+    font-size: 2.9em;
+    padding-left:.5em;
+    padding-right:.5em;
+  }
+
+  .team-holder{
+    padding: 2em 2em 0;
+  }
+
+  .team-member{
+    display:grid;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+
+  #tm2 img, #tm5 img{
+    grid-row:1;
+  }
+
+  #tm2 h6, #tm2 .team-position, #tm2 .team-p,
+  #tm5 h6, #tm5 .team-position, #tm5 .team-p{
+    text-align: center;
+  }
+
+  .team-p{
+    font-size: .95em;
+    margin-top: .8em;
+  }
+
+  .team-img{
+    height:9em;
+    margin: 0 auto;
+
+  }
+
+  .team-content-holder{
+    padding-top: .7em;
+  }
+
+  #tm4{
+    margin-top: 1em;
+  }
+
+
+}
+
+@media screen and (max-width:396px) {
+  .team-h3{
+    font-size: 2.8em;
+  }
+
+  .team-holder{
+    padding: 1.5em .7em 0;
+  }
+
+  .team-member{
+    margin-bottom: 1.5em;
+  }
+
+  .team-img{
+    height:8.5em;
+  }
+
+  h6{
+    font-size: 1.1em;
+  }
+  .team-p{
+    font-size: .85em;
+
+  }
+}
+
+@media screen and (max-width: 313px) {
+  .team-img{
+    height:8em;
+  }
+  .team-content-holder{
+    padding-left: 0.2;
+    padding-right: 0.2;
+  }
+}
+
+@media screen and (max-width:270px) {
+  .team-h3{
+    font-size: 2.3em;
+  }
+  .team-holder{
+    padding-top: 1.3em;
+  }
+
+  .team-img{
+    height:7.7em;
+  }
+
+  h6{
+    font-size: 1.05em;
+  }
+  .team-position{
+    font-size: .75em;
+  }
+  .team-p{
+    font-size: .8em;
+  }
+}
+
+
+/* Athletes */
+
+@media screen and (min-width:692px)and (max-width:753px) {
+  .cards-grid{
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media screen and (min-width:942px)and (max-width:1033px) {
+  .cards-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media screen and (min-width:1092px)and (max-width:1311px) {
+
+
+  .cards-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+@media screen and (max-width: 453px) {
+  .athlete-h3{
+    font-size: 3.1em;
+  }
+
+  .cards-grid{
+    padding: 2em 3em;
+    padding-bottom: 6em;
+  }
+}
+
+@media screen and (max-width:361px) {
+
+  .athlete-h3{
+    font-size: 2.7em;
+  }
+  .cards-grid{
+    padding: 2em 2em;
+    padding-bottom: 6em;
+
+  }
+}
+
+@media screen and (max-width:326px) {
+  .athlete-h3{
+    font-size: 2.35em;
+  }
+
+  .cards-grid{
+    padding: 1em 1em;
+    padding-bottom: 6em;
+
+  }
+
+  .flip-card{
+    width: 250px;
+    height: 358px;
+  }
+
+  .flip-card img{
+    width: 250px;
+    height: 358px;
+  }
+
+  .flip-card-back p{
+    font-size: .8em;
+    line-height: 1.3em;
+  }
+
+  .flip-card-back h4{
+    font-size:1.2em;
+    margin-bottom:.5em;
+  }
+}
+
+@media screen and (max-width: 278px) {
+  .athlete-h3{
+    font-size: 2.2em;
+  }
+
+  .cards-grid{
+    padding: 1em .5em;
+    padding-bottom: 6em;
+
+  }
+  .flip-card{
+    width: 240px;
+    height: 348px;
+  }
+
+  .flip-card img{
+    width: 240px;
+    height: 348px;
+  }
+}
+
+/* Seventh Page */
+
+@media screen and (max-width:1195px){
+  .btns-holder{
+    left:39%;
+  }
+}
+
+@media screen and (max-width:920px){
+  .btns-holder{
+    left:35%;
+  }
+}
+@media screen and (max-width:740px){
+  .sign-in button{
+    font-size: 1.9em;
+  }
+  .sign-in{
+    margin-bottom: 1.8em;
+  }
+
+}
+
+@media screen and (max-width:630px){
+  .btns-holder{
+    left:31%;
+  }
+}
+
+@media screen and (max-width:500px){
+  .btns-holder{
+    top:38%;
+    left:28%;
+  }
+  .sign-in button{
+    font-size: 1.75em;
+  }
+  .sign-in{
+    margin-bottom: 1.5em;
+  }
+
+  .media-icon{
+    font-size: 2.1em;
+  }
+}
+
+@media screen and (max-width:415px){
+  .btns-holder{
+    top:35%;
+    left:24%;
+  }
+  .sign-in button{
+    font-size: 1.7em;
+  }
+  .sign-in{
+    margin-bottom: 1.45em;
+  }
+}
+
+@media screen and (max-width:358px){
+  .btns-holder{
+    top:35%;
+    left:21%;
+  }
+  footer{
+    font-size: .95em;
+  }
+}
+
+@media screen and (max-width:320px){
+  .btns-holder{
+    top:34%;
+    left:19%;
+  }
+  .sign-in button{
+    font-size: 1.55em;
+  }
+
+  .sign-in{
+    margin-bottom: 1.35em;
+  }
+
+  .media-icon{
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width:260px){
+  .btns-holder{
+    top:34%;
+    left:17%;
+  }
+
+  .sign-in button{
+    font-size: 1.45em;
+  }
+
+  .sign-in{
+    margin-bottom: 1.25em;
+  }
+
+  .media-icon{
+    font-size: 1.8em;
+  }
+}
+
+
+
+@media screen and (max-width:750px) {
+
+  .ml4{
+
+    font-size: 4em;
+  }
+
+
+
+}
+
+@media screen and (max-width:650px) {
+
+  .ml4{
+    font-size: 3.8em;
+  }
+
+  .ml4 .letters{
+    top:.8em;
+  }
+
+}
+
+@media screen and (max-width:550px) {
+
+  .ml4{
+    font-size: 3.3em;
+  }
+
+  .ml4 .letters{
+    top:1em;
+  }
+
+
+
+}
+
+@media screen and (max-width:450px) {
+
+  .ml4{
+    font-size: 2.55em;
+    margin-top: 2.3em;
+  }
+
+  .ml4 .letters{
+    top:1.3em;
+  }
+
+
+}
+
+@media screen and (max-width:350px) {
+
+  .ml4{
+    font-size: 1.7em;
+  }
+
+  .ml4 .letters{
+    top:2em;
+  }
+
+}
