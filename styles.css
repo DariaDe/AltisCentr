@@ -674,21 +674,30 @@ line-height: 1.5em;
 .sign-in button{
 background: white;
   font-size: 2em;
-font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-  color:#233FD9;
   border: 3px solid #3e64ff;
   border-radius: 15px;
   padding:  .5em .7em;
   cursor: pointer;
 }
 
+.sign-in a{
+  color:#233FD9;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
 .sign-in button:hover{
  animation: btn_transition 1s ease-in-out;
   background: #233FD9;
-  color:white;
+
   border-radius: 75px;
   border: 3px solid #233FD9;
+}
+
+.sign-in button:hover a{
+  color:white;
+
 }
 
 @keyframes btn_transition {
