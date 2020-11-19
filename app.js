@@ -207,14 +207,14 @@ if(window.innerWidth > 1310){
 
 if(window.innerWidth <=760){
   var appearAnimation = new TimelineMax()
-      .from(".team-h3", 0.5, {opacity:0, y:100}, "=-.5")
-      .from("#tm1 img,#tm1.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
-      .from(" #tm1 .team-fio, #tm1 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut},"=-1")
-      .from("#tm1 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut }, "=-.5")
+      .from(".team-h3", 0.3, {opacity:0, y:100}, "=-.5")
+      .from("#tm1 img,#tm1.team-member", 0.7, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
+      .from(" #tm1 .team-fio, #tm1 .team-position", 0.7 ,{opacity:0, x:-50, ease: Power4.easeInOut},"=-.7")
+      .from("#tm1 .team-p", 0.3, {opacity:0, y:-30, ease: Power4.easeInOut }, "=-.3")
 
-      .from("#tm2 img,#tm2.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
-      .from(" #tm2 .team-fio, #tm2 .team-position", 1 ,{opacity:0, x:50, ease: Power4.easeInOut},"=-1")
-      .from("#tm2 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut },"=-.5")
+      .from("#tm2 img,#tm2.team-member", 0.7, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.7")
+      .from(" #tm2 .team-fio, #tm2 .team-position", 0.7 ,{opacity:0, x:50, ease: Power4.easeInOut},"=-.7")
+      .from("#tm2 .team-p", 0.3, {opacity:0, y:-30, ease: Power4.easeInOut },"=-.3")
 }
 else if(window.innerWidth <= 1310){
 
