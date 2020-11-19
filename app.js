@@ -13,6 +13,8 @@ if(window.innerWidth<450){
 const intro = document.querySelector(".intro");
 const text = intro.querySelector("h1");
 
+
+
 console.log(window.innerWidth)
 if(window.innerWidth<450){
 
@@ -26,6 +28,15 @@ else{
   )
 
 }
+
+const preloadImages = () => {
+  for (let i = 1; i < frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
+  }
+};
+
+
 
 const img = new Image()
 canvas.width = this.innerWidth;
@@ -127,7 +138,7 @@ let scene2 = new ScrollMagic.Scene({
   .setTween(textAnim)
   .addTo(controller);
 
-
+preloadImages();
 
 //Feature section
 
@@ -167,61 +178,63 @@ var wipeAnimation = new TimelineMax()
 const scene4 = new ScrollMagic.Scene({
   triggerElement: "#third-page",
   triggerHook:0,
-  duration:"300%",
+  duration:"100%",
 
 })
 
 .setPin("#third-page")
-			.setTween(wipeAnimation)
+			 .setTween(wipeAnimation)
 			.addTo(controller2);
 
 
 if(window.innerWidth > 1310){
   var appearAnimation = new TimelineMax()
-  .from(".team-h3", 0.5, {opacity:0, y:100}, "=-.5")
-  .from("#tm1 img,#tm1.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
-  .from(" #tm1 .team-fio, #tm1 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut})
-  .from("#tm1 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut })
+      .from(".team-h3", 0.5, {opacity:0, y:100}, "=-.5")
+      .from("#tm1 img,#tm1.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
+      .from(" #tm1 .team-fio, #tm1 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut},"=-1")
+      .from("#tm1 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut }, "=-.5")
 
-  .from("#tm2 img,#tm2.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
-  .from(" #tm2 .team-fio, #tm2 .team-position", 1 ,{opacity:0, x:50, ease: Power4.easeInOut})
-  .from("#tm2 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut })
+      .from("#tm2 img,#tm2.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
+      .from(" #tm2 .team-fio, #tm2 .team-position", 1 ,{opacity:0, x:50, ease: Power4.easeInOut},"=-1")
+      .from("#tm2 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut },"=-.5")
 
-  .from("#tm3 img,#tm3.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
-  .from(" #tm3 .team-fio, #tm3 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut})
-  .from("#tm3 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut })
+      .from("#tm3 img,#tm3.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
+      .from(" #tm3 .team-fio, #tm3 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut},"=-1")
+      .from("#tm3 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut },"=-.5")
+
 
 }
 
 if(window.innerWidth <=760){
   var appearAnimation = new TimelineMax()
-  .from(".team-h3", 0.5, {opacity:0, y:100}, "=-.5")
-  .from("#tm1 img,#tm1.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
-  .from(" #tm1 .team-fio, #tm1 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut})
-  .from("#tm1 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut })
+      .from(".team-h3", 0.5, {opacity:0, y:100}, "=-.5")
+      .from("#tm1 img,#tm1.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
+      .from(" #tm1 .team-fio, #tm1 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut},"=-1")
+      .from("#tm1 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut }, "=-.5")
 
-  .from("#tm2 img,#tm2.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
-  .from(" #tm2 .team-fio, #tm2 .team-position", 1 ,{opacity:0, x:50, ease: Power4.easeInOut})
-  .from("#tm2 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut })
+      .from("#tm2 img,#tm2.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
+      .from(" #tm2 .team-fio, #tm2 .team-position", 1 ,{opacity:0, x:50, ease: Power4.easeInOut},"=-1")
+      .from("#tm2 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut },"=-.5")
 }
 else if(window.innerWidth <= 1310){
+
   var appearAnimation = new TimelineMax()
   .from(".team-h3", 0.5, {opacity:0, y:100}, "=-.5")
   .from("#tm1 img,#tm1.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
-  .from(" #tm1 .team-fio, #tm1 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut})
-  .from("#tm1 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut })
+  .from(" #tm1 .team-fio, #tm1 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut},"=-1")
+   .from("#tm1 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut }, "=-.5")
 
   .from("#tm2 img,#tm2.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
-  .from(" #tm2 .team-fio, #tm2 .team-position", 1 ,{opacity:0, x:50, ease: Power4.easeInOut})
-  .from("#tm2 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut })
+  .from(" #tm2 .team-fio, #tm2 .team-position", 1 ,{opacity:0, x:50, ease: Power4.easeInOut},"=-1")
+  .from("#tm2 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut },"=-.5")
 
   .from("#tm3 img,#tm3.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
-  .from(" #tm3 .team-fio, #tm3 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut})
-  .from("#tm3 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut })
+  .from(" #tm3 .team-fio, #tm3 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut},"=-1")
+  .from("#tm3 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut },"=-.5")
 
   .from("#tm5 img,#tm5.team-member", 1, {opacity:0,y:-50, ease: Power4.easeInOut},"=-.5")
-  .from(" #tm5 .team-fio, #tm5 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut})
-  .from("#tm5 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut })
+  .from(" #tm5 .team-fio, #tm5 .team-position", 1 ,{opacity:0, x:-50, ease: Power4.easeInOut},"=-1")
+  .from("#tm5 .team-p", 0.5, {opacity:0, y:-30, ease: Power4.easeInOut },"=-.5")
 
 }
 
@@ -245,7 +258,7 @@ else if(window.innerWidth <= 1310){
 if(window.innerWidth > 760){
   var appearAnimation3 = new TimelineMax()
   .from(".athlete-h3", 1 ,{opacity:0, y:50, ease:Power4.easeInOut})
-  .from(".cards-grid", 1, {opacity:0, y:60,ease:Power4.easeInOut})
+  .from(".cards-grid", 1, {opacity:0, y:60,ease:Power4.easeInOut}, "=-.7")
 
   const scene7 = new ScrollMagic.Scene({
     triggerElement:"#sixth-page",
@@ -319,3 +332,5 @@ anime.timeline({loop: true})
     easing: "easeInExpo",
     delay: ml4.delay
   });
+
+
