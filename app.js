@@ -147,6 +147,7 @@ preloadImages();
 
 var controller2 = new ScrollMagic.Controller();
 
+
 var wipeAnimation = new TimelineMax()
     .from(".sticky", 1, {opacity:0, y:100})
 // .from(".feature-h3", 1, {opacity:0, y:100})
@@ -155,31 +156,32 @@ var wipeAnimation = new TimelineMax()
 // .from("#f2",1, {x:-200, opacity: 0,ease: Power4.easeInOut}, "=-1")
 // .from("#f1", 1, {x:200, opacity: 0, ease: Power4.easeInOut}, "=-.7")
 
-.fromTo("section.sticky2", 1, {x:"-100%"}, {x: "0%", ease: Linear.easeNone}, "=1" )
-// .from("#f2-p", 0.5, {opacity:0, x:-200})
+.fromTo("section.sticky2", 1, {opacity:0, x:"-100%"}, {opacity:1, x: "0%", ease: Linear.easeNone}, "=1" )
+ .from("#f2-p", 0.5, {opacity:0, x:-200})
 // .from("l2", 1, { width: 0}, "=-.5")
 // .from(".f3",1, {x:200, opacity: 0,ease: Power4.easeInOut}, "=-1")
 // .from(".f4", 1, {x:-200, opacity: 0, ease: Power4.easeInOut}, "=-.7")
 
 
-.fromTo("section.sticky3", 1 , {x:  "100%"}, {x: "0%", ease: Linear.easeNone}, "=1")
-.from("#f3-p", 0.5, {opacity:0, x:200})
-.from("l3", 1, { width: 0}, "=-.5")
-.from(".f5",1, {x:-200, opacity: 0,ease: Power4.easeInOut}, "=-1")
-.from(".f6", 1, {x:200, opacity: 0, ease: Power4.easeInOut}, "=-.7")
+.fromTo("section.sticky3", 1 , { opacity:0, x:  "100%"}, {opacity:1, x: "0%", ease: Linear.easeNone}, "=1")
+ .from("#f3-p", 0.5, {opacity:0, x:200})
+// .from("l3", 1, { width: 0}, "=-.5")
+// .from(".f5",1, {x:-200, opacity: 0,ease: Power4.easeInOut}, "=-1")
+// .from(".f6", 1, {x:200, opacity: 0, ease: Power4.easeInOut}, "=-.7")
 
 
-.fromTo("section.sticky4", 1,{y: "-100%"}, {y: "0%", ease: Linear.easeNone}, "=1")
+.fromTo("section.sticky4", 1,{opacity:0, y: "-100%"}, {opacity:1,y: "0%", ease: Linear.easeNone}, "=1")
 .from("#f4-p", 0.5, {opacity:0, x:-200})
-.from("l4", 1, { width: 0}, "=-.5")
-.from(".f7",1, {x:200, opacity: 0,ease: Power4.easeInOut}, "=-1")
-.from(".f8", 1, {x:-200, opacity: 0, ease: Power4.easeInOut}, "=-.7")
+// .from("l4", 1, { width: 0}, "=-.5")
+// .from(".f7",1, {x:200, opacity: 0,ease: Power4.easeInOut}, "=-1")
+// .from(".f8", 1, {x:-200, opacity: 0, ease: Power4.easeInOut}, "=-.7")
+
 
 
 const scene4 = new ScrollMagic.Scene({
   triggerElement: "#third-page",
   triggerHook:0,
-  duration:"500%",
+  duration:"400%",
 
 })
 
