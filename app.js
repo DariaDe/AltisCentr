@@ -179,7 +179,7 @@ var wipeAnimation = new TimelineMax()
 const scene4 = new ScrollMagic.Scene({
   triggerElement: "#third-page",
   triggerHook:0,
-  duration:"100%",
+  duration:"500%",
 
 })
 
