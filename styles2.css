@@ -9,6 +9,8 @@ body{
   font-family: sans-serif;
   overflow-x: hidden;
   background: #01012F;
+  overscroll-behavior: none;
+  overflow-anchor: none;
 }
 
 a{
